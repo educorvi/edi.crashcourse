@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="edi.crashcourse.AddCrashKurs"
+        title="edi.crashcourse: Add CrashKurs"
+    />
+
+
+    <permission
         id="edi.crashcourse.AddMeinKurs"
         title="edi.crashcourse: Add MeinKurs"
     />
