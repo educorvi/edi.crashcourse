@@ -42,6 +42,14 @@
       name="edi.crashcourse-hiddenprofiles"
       />
 
+  <subscriber
+      for="edi.crashcourse.content.crash_course.ICrashCourse
+           zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".events.setCrashCoursePortlet"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
+
+  <include package=".views" />
 
 </configure>
