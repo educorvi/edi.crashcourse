@@ -3,6 +3,6 @@ from zope.intid.interfaces import IIntIds
 from z3c.relationfield import RelationValue
 
 
-def setCrashCoursePortlet(presenter, event):
+def setCrashKursPortlet(obj, event):
     intids = getUtility(IIntIds)
-    obj.cards = [RelationValue(self.intids.getId(obj))]
+    obj.cards = [RelationValue(intids.getId(obj))]

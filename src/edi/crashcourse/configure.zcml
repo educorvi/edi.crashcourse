@@ -43,9 +43,9 @@
       />
 
   <subscriber
-      for="edi.crashcourse.content.crash_course.ICrashCourse
+      for="edi.crashcourse.content.crash_kurs.ICrashKurs
            zope.lifecycleevent.interfaces.IObjectAddedEvent"
-      handler=".events.setCrashCoursePortlet"
+      handler=".events.setCrashKursPortlet"
       />
 
   <!-- -*- extra stuff goes here -*- -->

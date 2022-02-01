@@ -4,6 +4,7 @@ from plone.dexterity.content import Container
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
+from plone import api as ploneapi
 
 
 from edi.crashcourse import _
@@ -14,7 +15,7 @@ class ICrashKurs(model.Schema):
     """
 
     autoren = schema.List(title = "Kursautor:innen",
-            description = "E-Mail-Adressen der Kursautor:innen (eine E-Mail-Adresse pro Zeile."
+            description = "E-Mail-Adressen der Kursautor:innen (eine E-Mail-Adresse pro Zeile.",
             value_type = schema.TextLine(),
             required = True
             )
@@ -34,7 +35,7 @@ class ICrashKurs(model.Schema):
     benutzerdaten = schema.Bool(title = "Benutzerdaten speichern",
             description = "Checkbox markieren wenn die Nutzungsdaten in den Ordnern der Benutzer\
                            gespeichert werden sollen."
-
+            )
 
 @implementer(ICrashKurs)
 class CrashKurs(Container):
