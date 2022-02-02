@@ -49,7 +49,6 @@
     <!--<element value="plone.nextprevioustoggle" />-->
     <element value="nva.folderbehaviors.einstellungen.IEinstellungen"/>
     <element value="nva.folderbehaviors.cards.ICards"/>
-    <element value="nva.folderbehaviors.titelbild.ITitelbild"/>
     <element value="nva.folderbehaviors.interfaces.INvaPortletMarker"/>
     <element value="nva.webcode.webcode"/>
   </property>

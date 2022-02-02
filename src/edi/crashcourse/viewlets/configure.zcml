@@ -7,6 +7,16 @@
   -*- extra stuff goes here -*-
 
   <browser:viewlet
+     name="kurs-titel-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
+     class=".kurs_titel_viewlet.KursTitelViewlet"
+     template="kurs-titel-viewlet.pt"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
      name="opener-video-viewlet"
      for="plone.app.contenttypes.interfaces.IDocument"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
