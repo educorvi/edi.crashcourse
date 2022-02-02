@@ -7,6 +7,16 @@
   -*- extra stuff goes here -*-
 
   <browser:viewlet
+     name="add-info-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
+     class=".add_info_viewlet.AddInfoViewlet"
+     template="add-info-viewlet.pt"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
      name="goals-viewlet"
      for="plone.app.contenttypes.interfaces.IDocument"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
