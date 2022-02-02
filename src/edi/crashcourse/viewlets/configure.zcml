@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="edi.crashcourse">
+
+  -*- extra stuff goes here -*-
+
+  <browser:viewlet
+     name="about-kurs-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
+     class=".about_kurs_viewlet.AboutKursViewlet"
+     template="about-kurs-viewlet.pt"
+     permission="zope2.View"
+     />
+
+
+</configure>
