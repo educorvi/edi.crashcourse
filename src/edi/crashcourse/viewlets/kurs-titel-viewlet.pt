@@ -1,3 +1,4 @@
-<div class="days_to_conf">
-    ${view/message}
-</div>
+<figure tal:define="caption context/courseimage_caption" tal:condition="context/courseimage" class="figure mb-4">
+  <img class="figure-img img-fluid rounded" tal:attributes="src python:context.absolute_url()+'/@@images/courseimage'; alt caption">
+  <!--<figcaption class="figure-caption text-left mt-n2" tal:content="caption"></figcaption>-->
+</figure>

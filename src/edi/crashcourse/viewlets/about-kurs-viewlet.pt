@@ -1,3 +1,4 @@
-<div class="days_to_conf">
-    ${view/message}
-</div>
+<section id="about" class="mt-5">
+  <h2>Über den Kurs</h2>
+  <span tal:replace="structure view/about"/>
+</section>	  

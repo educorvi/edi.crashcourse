@@ -5,11 +5,9 @@ from plone.app.layout.viewlets import ViewletBase
 
 class AddInfoViewlet(ViewletBase):
 
-    def update(self):
-        self.message = self.get_message()
-
-    def get_message(self):
-        return u'My message'
-
     def render(self):
-        return super(AddInfoViewlet, self).render()
+        if self.context.sonstiges:
+            if self.context.sonstiges.output:
+                self.addinfo = self.context.sonstiges.output
+                return super(AddInfoViewlet, self).render()
+        return ''

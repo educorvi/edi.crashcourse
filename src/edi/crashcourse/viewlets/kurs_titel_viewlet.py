@@ -2,14 +2,9 @@
 
 from plone.app.layout.viewlets import ViewletBase
 
-
 class KursTitelViewlet(ViewletBase):
 
-    def update(self):
-        self.message = self.get_message()
-
-    def get_message(self):
-        return u'My message'
-
     def render(self):
-        return super(KursTitelViewlet, self).render()
+        if self.context.courseimage:
+            return super(KursTitelViewlet, self).render()
+        return ''

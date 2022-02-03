@@ -5,11 +5,9 @@ from plone.app.layout.viewlets import ViewletBase
 
 class GoalsViewlet(ViewletBase):
 
-    def update(self):
-        self.message = self.get_message()
-
-    def get_message(self):
-        return u'My message'
-
     def render(self):
-        return super(GoalsViewlet, self).render()
+        if self.context.lernziele:
+            if self.context.lernziele.output:
+                self.goals = self.context.lernziele.output
+                return super(GoalsViewlet, self).render()
+        return ''

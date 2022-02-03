@@ -8,7 +8,7 @@
 
   <browser:viewlet
      name="kurs-titel-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
+     for="edi.crashcourse.content.crash_kurs.ICrashKurs"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
      layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
      class=".kurs_titel_viewlet.KursTitelViewlet"
@@ -27,19 +27,19 @@
      />
 
   <browser:viewlet
-     name="add-info-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     name="about-kurs-viewlet"
+     for="edi.crashcourse.content.crash_kurs.ICrashKurs"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
      layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
-     class=".add_info_viewlet.AddInfoViewlet"
-     template="add-info-viewlet.pt"
+     class=".about_kurs_viewlet.AboutKursViewlet"
+     template="about-kurs-viewlet.pt"
      permission="zope2.View"
      />
 
   <browser:viewlet
      name="goals-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     for="edi.crashcourse.content.crash_kurs.ICrashKurs"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
      layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
      class=".goals_viewlet.GoalsViewlet"
      template="goals-viewlet.pt"
@@ -47,14 +47,13 @@
      />
 
   <browser:viewlet
-     name="about-kurs-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     name="add-info-viewlet"
+     for="edi.crashcourse.content.crash_kurs.ICrashKurs"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
      layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
-     class=".about_kurs_viewlet.AboutKursViewlet"
-     template="about-kurs-viewlet.pt"
+     class=".add_info_viewlet.AddInfoViewlet"
+     template="add-info-viewlet.pt"
      permission="zope2.View"
      />
-
 
 </configure>

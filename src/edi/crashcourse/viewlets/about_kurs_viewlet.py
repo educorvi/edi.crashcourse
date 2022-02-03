@@ -5,11 +5,9 @@ from plone.app.layout.viewlets import ViewletBase
 
 class AboutKursViewlet(ViewletBase):
 
-    def update(self):
-        self.message = self.get_message()
-
-    def get_message(self):
-        return u'My message'
-
     def render(self):
-        return super(AboutKursViewlet, self).render()
+        if self.context.about:
+            if self.context.about.output:
+                self.about = self.context.about.output
+                return super(AboutKursViewlet, self).render()
+        return ''
