@@ -1,3 +1,28 @@
-<section id="portlet-navigation">
-  <p tal:repeat="entry view/fc"><a tal:attributes="href entry/getURL" tal:content="entry/Title"/></p>
-</section>
+<div class="row mr-n4">
+  <div class="col-12">
+    <span class="bi bi-clock mt-3" tal:content="python:' ' + view.dauer">ca. 10 Stunden</span>
+  </div>
+</div>
+<hr>
+<div class="row mr-n4" tal:define="kursautoren view/kursautoren">
+  <div class="col-12">	
+    <section id="contact-information">
+      <h5>Kursteam</h5>	
+      <p tal:repeat="autor kursautoren">
+        <span tal:condition="autor/fullname" class="bi bi-person-circle" tal:content="python:' '+autor['fullname']"></span><br/>
+	<a tal:condition="autor/email" tal:attributes="href string:mailto${autor/email}">
+	  <span class="bi bi-envelope" tal:content="python:' '+autor['email']"></span>
+	</a>
+      </p>
+    </section>
+  </div>
+</div>
+<hr>
+<div class="row mr-n4">
+  <div class="col-12">
+    <h5>Skills</h5>	
+    <div class="menu-section-content" id="portlet-navigation">
+	<p tal:repeat="entry view/fc" ><a tal:attributes="href entry/getURL" tal:content="entry/Title"/></p>
+    </div>
+  </div>
+</div>

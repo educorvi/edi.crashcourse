@@ -55,10 +55,12 @@
 
   <!-- View information -->
   <property name="add_view_expr">string:${folder_url}/++add++CrashKurs</property>
-  <property name="default_view">enhanced_foldersummary</property>
+  <property name="default_view">enhanced_folderlist</property>
   <property name="default_view_fallback">False</property>
-  <property name="immediate_view">enhanced_foldersummary</property>
+  <property name="immediate_view">enhanced_folderlist</property>
   <property name="view_methods">
+    <element value="enhanced_folderlist"/>
+    <element value="enhanced_foldertext"/>	    
     <element value="enhanced_foldersummary"/>
     <element value="enhanced_cardview"/>
   </property>
