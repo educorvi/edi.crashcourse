@@ -52,6 +52,8 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
+        'plone.namedfile',
+        'plone.formwidget.namedfile',
     ],
     extras_require={
         'test': [

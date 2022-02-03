@@ -1,3 +1,23 @@
-<div class="days_to_conf">
-    ${view/message}
+<div tal:define="datei view/getMedia;filetype python:datei.get('contentType')" tal:condition="datei" class="card-img-top">
+  <div class="col-xs-12 col-sm-12" tal:condition="python: filetype == 'video/mp4'">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video class="embed-responsive-item" controls>
+	<source tal:attributes="src datei/url;" type="video/mp4">
+	Dein Browser kann dieses Video nicht wiedergeben.<br/>
+	Du kannst die Datei unter <a href="#" tal:attributes="href datei/url" tal:content="datei/filename"></a> herunterladen.
+      </video>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12" tal:condition="python: filetype == 'audio/mpeg'">
+    <audio src="" tal:attributes="src datei/url;type datei/contentType" controls>
+      Dein Browser kann diese Tonaufnahme nicht wiedergeben.<br/>
+      Du kannst die Datei unter <a href="#" tal:attributes="href datei/url" tal:content="datei/filename"></a> herunterladen.
+    </audio>
+  </div>
+  <div class="col-xs-12 col-sm-12" tal:condition="python: filetype != 'video/mp4' and filetype != 'audio/mpeg'">
+    <a href="" tal:attributes="href datei/url"><span class="glyphicon glyphicon-download"/>
+					      <span tal:content="datei/filename"/>
+					      (<span tal:content="filetype"/> - <span tal:content="datei/size"/>)
+    </a>
+  </div>
 </div>
