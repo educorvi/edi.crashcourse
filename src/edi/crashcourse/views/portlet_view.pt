@@ -4,7 +4,7 @@
   </div>
 </div>
 <hr>
-<div class="row mr-n4" tal:define="kursautoren view/kursautoren">
+<div class="row mr-n4" tal:define="kursautoren view/kursautoren" tal:condition="kursautoren">
   <div class="col-12">	
     <section id="contact-information">
       <h5>Kursteam</h5>	
@@ -17,7 +17,7 @@
     </section>
   </div>
 </div>
-<hr>
+<hr tal:condition="view/kursautoren">
 <div class="row mr-n4">
   <div class="col-12">
     <h5>Skills</h5>	

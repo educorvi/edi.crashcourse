@@ -39,10 +39,10 @@ class ICrashKurs(model.Schema):
             default = "Kursinhalte",
             )
 
-    autoren = schema.List(title = "Kursautor:innen",
-            description = "E-Mail-Adressen der Kursautor:innen (eine E-Mail-Adresse pro Zeile).",
+    autoren = schema.List(title = "Kursteam",
+            description = "Benutzernamen der Teammitglieder zur Anmeldung am System (z. B. E-Mail-Adresse). Ein Eintrag pro Zeile.",
             value_type = schema.TextLine(),
-            required = True
+            required = False
             )
 
     benutzerdaten = schema.Bool(title = "Besuchs- und Ergebnisdaten im privaten Ordner der Lernenden speichern."

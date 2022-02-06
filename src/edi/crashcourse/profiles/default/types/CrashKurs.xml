@@ -19,7 +19,7 @@
 
   <!-- Hierarchy control -->
   <property name="global_allow">True</property>
-  <property name="filter_content_types">False</property>
+  <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
     <element value="Skill" />
   </property>
@@ -41,12 +41,10 @@
     <element value="plone.categorization"/>
     <element value="plone.basic"/>
     <element value="plone.locking" />
-    <element value="plone.leadimage"/>
     <element value="plone.versioning" />
     <element value="plone.nextpreviousenabled" />
     <element value="plone.relateditems"/>
     <element value="plone.translatable" />
-    <!--<element value="plone.nextprevioustoggle" />-->
     <element value="nva.folderbehaviors.einstellungen.IEinstellungen"/>
     <element value="nva.folderbehaviors.cards.ICards"/>
     <element value="nva.folderbehaviors.interfaces.INvaPortletMarker"/>

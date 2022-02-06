@@ -18,4 +18,13 @@
       directory="static"
       />
 
+  <browser:viewlet
+    name="plone.nextprevious"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+    class="plone.app.layout.nextprevious.view.NextPreviousViewlet"
+    template="nextprevious.pt"
+    layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
+    permission="zope2.View"
+    />
+
 </configure>

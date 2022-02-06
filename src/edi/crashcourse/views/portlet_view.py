@@ -14,13 +14,14 @@ class PortletView(BrowserView):
 
     def getCourseTeam(self):
         kursautoren = []
-        autoren = self.context.autoren
-        for username in autoren:
-            entry = {}
-            user = ploneapi.user.get(username=username)
-            if user:
-                entry['fullname'] = user.getProperty('fullname')
-                entry['email'] = user.getProperty('email')
-                if entry:
-                    kursautoren.append(entry)
+        autoren = getattr(self.context, 'autoren', [])
+        if autoren:
+            for username in autoren:
+                entry = {}
+                user = ploneapi.user.get(username=username)
+                if user:
+                    entry['fullname'] = user.getProperty('fullname')
+                    entry['email'] = user.getProperty('email')
+                    if entry:
+                        kursautoren.append(entry)
         return kursautoren

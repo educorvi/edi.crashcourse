@@ -1,0 +1,66 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     tal:define="enabled view/enabled|nothing;
+                 isViewTemplate view/isViewTemplate|nothing"
+     tal:condition="python:enabled and isViewTemplate"
+     tal:omit-tag=""
+     i18n:domain="plone">
+
+  <tal:block define="portal_url view/site_url;">
+
+    <ul class="nav justify-content-center mt-3 mb-3"
+	 tal:define="next view/next; previous view/previous"
+         tal:condition="python:previous is not None or next is not None">
+
+      <li class="nav-item" tal:condition="previous">	    
+        <a class="nav-link" tal:attributes="href previous/url"><span class="bi bi-arrow-left"/> Zurück</a>
+      </li>
+
+      <li class="nav-item" tal:condition="next">
+        <a class="nav-link" tal:attributes="href next/url">Weiter <span class="bi bi-arrow-right"/></a>
+      </li>
+
+    </ul>
+
+
+    <!--<nav class="pagination"
+         tal:define="next view/next;
+                     previous view/previous"
+         tal:condition="python:previous is not None or next is not None">
+
+      <ul class="nav justify-content-center">
+
+        <li class="nav-item" tal:condition="previous">
+          <a title="Go to previous item"
+              i18n:attributes="title title_previous_item"
+              tal:attributes="href previous/url">
+            <span class="arrow"></span>
+            <span i18n:translate="label_previous_item" class="label">
+              Previous:
+	      <span i18n:name="itemtitle" tal:replace="previous/title" />
+            </span>
+          </a>
+        </li>
+
+        <li class="nav-item" tal:condition="next">
+          <a title="Go to next item"
+              i18n:attributes="title title_next_item"
+              tal:attributes="href next/url">
+            <span i18n:translate="label_next_item" class="label">
+              Next:
+	      <span i18n:name="itemtitle" tal:replace="next/title" />
+            </span>
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        &nbsp;
+
+      </ul>
+
+    </nav>-->
+
+  </tal:block>
+
+</div>

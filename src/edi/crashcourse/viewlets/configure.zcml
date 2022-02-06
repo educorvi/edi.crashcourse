@@ -7,6 +7,15 @@
   -*- extra stuff goes here -*-
 
   <browser:viewlet
+     name="user-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
+     class=".user_viewlet.UserViewlet"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
      name="kurs-titel-viewlet"
      for="edi.crashcourse.content.crash_kurs.ICrashKurs"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
