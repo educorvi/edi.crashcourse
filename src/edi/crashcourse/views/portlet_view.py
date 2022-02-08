@@ -10,6 +10,7 @@ class PortletView(BrowserView):
         self.fc = self.context.getFolderContents()
         self.kursautoren = self.getCourseTeam()
         self.dauer = self.context.dauer
+        self.skillheadline = self.context.skillheadline
         return self.index()
 
     def getCourseTeam(self):

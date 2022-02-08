@@ -7,6 +7,16 @@
   -*- extra stuff goes here -*-
 
   <browser:viewlet
+     name="skill-headline-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="edi.crashcourse.interfaces.IEdiCrashcourseLayer"
+     class=".skill_headline_viewlet.SkillHeadlineViewlet"
+     template="skill-headline-viewlet.pt"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
      name="user-viewlet"
      for="plone.app.contenttypes.interfaces.IDocument"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
