@@ -18,7 +18,7 @@ class ICrashKurs(model.Schema):
     """
 
     about = RichText(
-            title = "Kursbeschreibung",
+            title = "Kursinhalt",
             description = "Verfassen Sie hier eine allgemeine Beschreibung des Kurses.",
             required = True
             )
@@ -36,7 +36,7 @@ class ICrashKurs(model.Schema):
 
     skillheadline = schema.TextLine(title = "Überschrift für die Skill-Auflistung",
             required = True,
-            default = "Kursinhalte",
+            default = "Skills",
             )
 
     autoren = schema.List(title = "Kursteam",

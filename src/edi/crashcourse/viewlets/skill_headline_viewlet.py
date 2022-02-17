@@ -2,14 +2,7 @@
 
 from plone.app.layout.viewlets import ViewletBase
 
-
 class SkillHeadlineViewlet(ViewletBase):
 
     def update(self):
-        self.message = self.get_message()
-
-    def get_message(self):
-        return u'My message'
-
-    def render(self):
-        return super(SkillHeadlineViewlet, self).render()
+        self.skillheadline = self.context.skillheadline
