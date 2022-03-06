@@ -20,7 +20,7 @@
 <hr tal:condition="view/kursautoren">
 <div class="row mr-n4">
   <div class="col-12">
-    <h5 tal:content="view/skillheadline">Skills</h5>	
+    <h5 tal:content="view/skillheadline">Skills/Aufgaben</h5>	
     <div class="menu-section-content" id="portlet-navigation">
 	<p tal:repeat="entry view/fc" ><a tal:attributes="href entry/getURL" tal:content="entry/Title"/></p>
     </div>

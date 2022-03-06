@@ -36,7 +36,7 @@ class ICrashKurs(model.Schema):
 
     skillheadline = schema.TextLine(title = "Überschrift für die Skill-Auflistung",
             required = True,
-            default = "Skills",
+            default = "Skills/Aufgaben",
             )
 
     autoren = schema.List(title = "Kursteam",
