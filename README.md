@@ -15,7 +15,7 @@ Das Plone-Add-On bietet die Möglichkeit zur Veröffentlichung von Online-Kursen
 
 ![Crashkurs in Plone](images/Crashkurs.png "Crashkurs in Plone")
 
-[Link text Here](http://kurse.uv-kooperation.de/)
+[kurse.uv-kooperation.de](http://kurse.uv-kooperation.de/)
 
 
 ## Installation
