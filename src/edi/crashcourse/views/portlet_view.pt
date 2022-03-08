@@ -22,7 +22,8 @@
   <div class="col-12">
     <h5 tal:content="view/skillheadline">Skills/Aufgaben</h5>	
     <div class="menu-section-content" id="portlet-navigation">
-	<p tal:repeat="entry view/fc" ><a tal:attributes="href entry/getURL" tal:content="entry/Title"/></p>
+      <p tal:repeat="entry view/fc" ><i tal:condition="entry/iconclass" tal:attributes="class entry/iconclass"></i>
+        <a tal:attributes="href entry/url" tal:content="entry/title"/></p>
     </div>
   </div>
 </div>

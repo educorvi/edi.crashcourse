@@ -7,7 +7,7 @@ from plone import api as ploneapi
 class PortletView(BrowserView):
 
     def __call__(self):
-        self.fc = self.context.getFolderContents()
+        self.fc = self.getCourseContents()
         self.kursautoren = self.getCourseTeam()
         self.dauer = self.context.dauer
         self.skillheadline = self.context.skillheadline
@@ -26,3 +26,18 @@ class PortletView(BrowserView):
                     if entry:
                         kursautoren.append(entry)
         return kursautoren
+
+    def getCourseContents(self):
+        fc = self.context.getFolderContents()
+        courseentries = []
+        for entry in fc:
+            courseentry = {}
+            courseentry['title'] = entry.Title
+            courseentry['url'] = entry.getURL()
+            courseentry['iconclass'] = ''
+            if entry.portal_type == 'Skill':
+                courseentry['iconclass'] = 'bi bi-book'
+            elif entry.portal_type == 'Aufgabe':
+                courseentry['iconclass'] = 'bi bi-clipboard'
+            courseentries.append(courseentry)
+        return courseentries
