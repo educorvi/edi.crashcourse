@@ -12,11 +12,16 @@
       />
 
   <!-- Publish static files -->
-  <plone:static
+  <!--<plone:static
       name="edi.crashcourse"
       type="plone"
       directory="static"
-      />
+      />-->
+
+  <browser:resourceDirectory
+      name="edi.crashcourse"
+      directory="static" />
+
 
   <browser:viewlet
     name="plone.nextprevious"

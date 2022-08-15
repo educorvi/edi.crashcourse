@@ -1,4 +1,35 @@
-<figure tal:define="caption context/courseimage_caption" tal:condition="context/courseimage" class="figure mb-4">
-  <img class="figure-img img-fluid rounded" tal:attributes="src python:context.absolute_url()+'/@@images/courseimage'; alt caption">
+<figure tal:define="caption context/courseimage_caption" tal:condition="context/courseimage" class="figure mb-4 zoom">
+  <img class="figure-img img-fluid rounded" id="titleimage" tal:attributes="src python:context.absolute_url()+'/@@images/courseimage'; alt caption">
   <!--<figcaption class="figure-caption text-left mt-n2" tal:content="caption"></figcaption>-->
 </figure>
+
+<!--<div id="img-container" class="myzoom" style="width:400px;">
+    <img tal:attributes="src python:context.absolute_url()+'/@@images/courseimage'"/>
+</div>-->
+
+<script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
+
+<script>
+
+var options1 = {
+    width: 400,
+    zoomWidth: 500,
+    offset: {vertical: 0, horizontal: 10}
+};
+
+// If the width and height of the image are not known or to adjust the image to the container of it
+
+var domnode = document.getElementById("zoom-container")
+var options2 = {
+    fillContainer: true,
+    zoomWidth: 200,
+    offset: {vertical: 0, horizontal: 10}
+};
+
+$(".myzoom").each(function() {
+  new ImageZoom(this, options2);
+});
+
+// new ImageZoom(document.getElementById("img-container"), options2);
+
+</script>
